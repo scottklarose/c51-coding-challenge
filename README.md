@@ -23,7 +23,7 @@ This is a relatively simple app, however we are looking for more than just the t
 Depending on your skills you can write in Java, Kotlin or a combination of both. Over time, we are porting the app from Java to Kotlin, so feel free to do what makes the most sense for you.
 
 ## Full-Stack Specifics
-We're primarily a PHP shop, but we are looking to gradually move away from PHP. PHP is still the preferred technology for this assignment, but we have components written in React.js, Node.js and Java, so feel free to mix these technologies in as you see fit.  Our minimal expectation is that there are some server side components in your solution.  The front end can be rendered on the client side or server side, its entirely up to you.  If you area applying for a senior or lead developer position, submissions that run in a docker container will be heavily favored.
+We're primarily a PHP shop, but we are starting to think about moving away from PHP. PHP is still the preferred technology for this assignment, but we have components written in React.js, Node.js and Java, so feel free to mix these technologies in as you see fit.  Our minimal expectation is that there are some server side components in your solution.  The front end can be rendered on the client side or server side, its entirely up to you.  If you area applying for a senior or lead developer position, submissions that run in a docker container will be heavily favored.
 
 
 
