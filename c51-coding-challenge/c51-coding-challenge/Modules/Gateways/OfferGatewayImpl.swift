@@ -57,7 +57,7 @@ class OfferGatewayImpl: OfferGateway {
             return nil
         }
         
-        let cashBackTitle = "$\(offer.cashBack)"
+        let cashBackTitle = String(format:"$%.2f", offer.cashBack)
         
         return OfferItem(offerImageUrl: offerImageUrl, offerName: offer.name, cashBack: cashBackTitle)
     }
@@ -68,6 +68,6 @@ class OfferGatewayImpl: OfferGateway {
     }
     
     private func sortOffersByCashBack() -> [Offer] {
-        return currentOffers.sorted { $0.cashBack < $1.cashBack }
+        return currentOffers.sorted { $0.cashBack > $1.cashBack }
     }
 }
