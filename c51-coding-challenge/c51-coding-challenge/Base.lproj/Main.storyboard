@@ -12,7 +12,7 @@
         <!--Checkout 51-->
         <scene sceneID="cyW-ma-OaP">
             <objects>
-                <tableViewController id="5A5-fP-FSL" sceneMemberID="viewController">
+                <tableViewController id="5A5-fP-FSL" customClass="Checkout51TableViewController" customModule="c51_coding_challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OZf-SK-fJP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,13 +38,48 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mB6-nI-pcn">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Checkout51TableViewCell" rowHeight="90" id="mB6-nI-pcn" customClass="Checkout51TableViewCell" customModule="c51_coding_challenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mB6-nI-pcn" id="vsa-75-M1B">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P71-8t-Cif">
+                                            <rect key="frame" x="20" y="10" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="RuI-xU-rGd"/>
+                                                <constraint firstAttribute="height" constant="70" id="u6V-un-yUY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Cash Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cer-KD-fHC">
+                                            <rect key="frame" x="308" y="34.5" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" red="0.46274509800000002" green="0.72156862749999995" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou5-dQ-13M">
+                                            <rect key="frame" x="98" y="10" width="59" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <color key="textColor" red="0.46274509800000002" green="0.72156862749999995" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cer-KD-fHC" secondAttribute="trailing" constant="20" id="Fvl-pT-czS"/>
+                                        <constraint firstItem="cer-KD-fHC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ou5-dQ-13M" secondAttribute="trailing" constant="15" id="Mlb-rO-VLs"/>
+                                        <constraint firstItem="P71-8t-Cif" firstAttribute="leading" secondItem="vsa-75-M1B" secondAttribute="leading" constant="20" id="TY7-Dk-QDD"/>
+                                        <constraint firstItem="ou5-dQ-13M" firstAttribute="top" secondItem="P71-8t-Cif" secondAttribute="top" id="aTU-yC-aMg"/>
+                                        <constraint firstItem="ou5-dQ-13M" firstAttribute="leading" secondItem="P71-8t-Cif" secondAttribute="trailing" constant="8" id="fLq-el-GWV"/>
+                                        <constraint firstItem="cer-KD-fHC" firstAttribute="centerY" secondItem="vsa-75-M1B" secondAttribute="centerY" id="r2F-Fs-6Nv"/>
+                                        <constraint firstItem="P71-8t-Cif" firstAttribute="centerY" secondItem="vsa-75-M1B" secondAttribute="centerY" id="wy0-gB-QKM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cashBack" destination="cer-KD-fHC" id="U2Q-an-dOM"/>
+                                    <outlet property="offerImage" destination="P71-8t-Cif" id="Lw9-Po-ohC"/>
+                                    <outlet property="offerName" destination="ou5-dQ-13M" id="OWx-XR-5aD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

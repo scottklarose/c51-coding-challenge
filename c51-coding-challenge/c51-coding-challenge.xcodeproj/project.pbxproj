@@ -14,6 +14,8 @@
 		104FEED722EE7F510028A406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104FEED522EE7F510028A406 /* LaunchScreen.storyboard */; };
 		104FEEE222EE7F510028A406 /* c51_coding_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEE122EE7F510028A406 /* c51_coding_challengeTests.swift */; };
 		104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEEF22EE8B2F0028A406 /* Offer.swift */; };
+		104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF222EE91D40028A406 /* Checkout51TableViewController.swift */; };
+		104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		104FEEE122EE7F510028A406 /* c51_coding_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c51_coding_challengeTests.swift; sourceTree = "<group>"; };
 		104FEEE322EE7F510028A406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104FEEEF22EE8B2F0028A406 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		104FEEF222EE91D40028A406 /* Checkout51TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout51TableViewController.swift; sourceTree = "<group>"; };
+		104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout51TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +83,7 @@
 		104FEECB22EE7F4F0028A406 /* c51-coding-challenge */ = {
 			isa = PBXGroup;
 			children = (
-				104FEEEC22EE7FDE0028A406 /* modules */,
+				104FEEEC22EE7FDE0028A406 /* Modules */,
 				104FEECC22EE7F4F0028A406 /* AppDelegate.swift */,
 				104FEECE22EE7F4F0028A406 /* ViewController.swift */,
 				104FEED022EE7F4F0028A406 /* Main.storyboard */,
@@ -99,28 +103,46 @@
 			path = "c51-coding-challengeTests";
 			sourceTree = "<group>";
 		};
-		104FEEEC22EE7FDE0028A406 /* modules */ = {
+		104FEEEC22EE7FDE0028A406 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				104FEEEE22EE7FF40028A406 /* gateways */,
-				104FEEED22EE7FEC0028A406 /* models */,
+				104FEEF422EE93130028A406 /* Table Cells */,
+				104FEEF122EE91630028A406 /* Controllers */,
+				104FEEEE22EE7FF40028A406 /* Gateways */,
+				104FEEED22EE7FEC0028A406 /* Models */,
 			);
-			path = modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		104FEEED22EE7FEC0028A406 /* models */ = {
+		104FEEED22EE7FEC0028A406 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				104FEEEF22EE8B2F0028A406 /* Offer.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		104FEEEE22EE7FF40028A406 /* gateways */ = {
+		104FEEEE22EE7FF40028A406 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = gateways;
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		104FEEF122EE91630028A406 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				104FEEF222EE91D40028A406 /* Checkout51TableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		104FEEF422EE93130028A406 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */,
+			);
+			path = "Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */,
+				104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */,
+				104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */,
 				104FEECF22EE7F4F0028A406 /* ViewController.swift in Sources */,
 				104FEECD22EE7F4F0028A406 /* AppDelegate.swift in Sources */,
 			);
