@@ -29,6 +29,9 @@
                                         <segment title="Cash Back"/>
                                     </segments>
                                     <color key="tintColor" red="0.46274509800000002" green="0.72156862749999995" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="applyNewOfferFilter:" destination="5A5-fP-FSL" eventType="valueChanged" id="fpk-fk-WeY"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,6 +91,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checkout 51" id="fbI-tC-5By"/>
+                    <connections>
+                        <outlet property="filterByNameCashBack" destination="UJU-gJ-S93" id="ySs-6g-aN7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ct8-u1-TuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

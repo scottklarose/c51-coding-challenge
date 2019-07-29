@@ -7,16 +7,38 @@ import UIKit
 
 
 class Checkout51TableViewController: UITableViewController {
-    let testItem1 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 1 Offer", cashBack: "$1.20")
-    let testItem2 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 2 Offer", cashBack: "$3.20")
-    let testItem3 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 3 Offer", cashBack: "$0.20")
-    
-    private var testArray = [OfferItem]()
+    @IBOutlet weak var filterByNameCashBack: UISegmentedControl!
+    private var currentlyDisplayedOffers = [OfferItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testArray = [testItem1, testItem2, testItem1, testItem3, testItem3, testItem1]
+        initializeInterface()
+        fetchCurrentOffers()
+    }
+    
+    private func initializeInterface() {
+        let font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        filterByNameCashBack.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+    }
+    
+    private func fetchCurrentOffers() {
+        guard let offerGateway = ServiceManager.shared.offerGateway else {
+            return
+        }
+        
+        let shouldSortByName = filterByNameCashBack.selectedSegmentIndex == 0 ? true : false
+        
+        offerGateway.setup(shouldSortByName: shouldSortByName) { [weak self] offers in
+            self?.currentlyDisplayedOffers = offers
+            self?.refreshData()
+        }
+    }
+    
+    private func refreshData() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -26,7 +48,7 @@ class Checkout51TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testArray.count
+        return currentlyDisplayedOffers.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -38,9 +60,28 @@ class Checkout51TableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        let item = testArray[indexPath.row]
+        let item = currentlyDisplayedOffers[indexPath.row]
         cell.populate(with: item)
         
         return cell
+    }
+    
+    // MARK: - IBAction Methods
+    
+    @IBAction func applyNewOfferFilter(_ sender: UISegmentedControl) {
+        guard let offerGateway = ServiceManager.shared.offerGateway else {
+            return
+        }
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            currentlyDisplayedOffers = offerGateway.offersSortedByName()
+        case 1:
+            currentlyDisplayedOffers = offerGateway.offersSortedByCashBack()
+        default:
+            break;
+        }
+        
+        refreshData()
     }
 }

@@ -14,6 +14,5 @@ class ServiceManager {
     
     func setup(networkService: NetworkService) {
         offerGateway = OfferGatewayImpl(networkService: networkService)
-        offerGateway?.setup()
     }
 }
