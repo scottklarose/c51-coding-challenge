@@ -12,7 +12,7 @@ class c51_coding_challengeTests: XCTestCase {
 
     override func setUp() {
         ServiceManager.shared.setup(networkService: mockNetworkService)
-        ServiceManager.shared.offerGateway?.setup(shouldSortByName: true) { offers in }
+        ServiceManager.shared.offerGateway?.fetchOffers(shouldSortByName: true) { offers in }
     }
 
     func test_offersSortedByName_withValidJSON_ShouldReturnOffersInAlphabeticalOrder() {

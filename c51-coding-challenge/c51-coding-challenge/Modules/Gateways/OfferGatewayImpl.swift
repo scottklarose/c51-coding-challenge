@@ -14,7 +14,7 @@ class OfferGatewayImpl: OfferGateway {
         self.networkService = networkService
     }
     
-    func setup(shouldSortByName: Bool, completion: @escaping ([OfferItem]) -> Void) {
+    func fetchOffers(shouldSortByName: Bool, completion: @escaping ([OfferItem]) -> Void) {
         networkService.executeRequest { [weak self] responseData, error in
             if error == nil {
                 guard let response = responseData,

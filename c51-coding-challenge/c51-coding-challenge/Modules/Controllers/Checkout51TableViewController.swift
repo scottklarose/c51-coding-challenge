@@ -29,7 +29,7 @@ class Checkout51TableViewController: UITableViewController {
         
         let shouldSortByName = filterByNameCashBack.selectedSegmentIndex == 0 ? true : false
         
-        offerGateway.setup(shouldSortByName: shouldSortByName) { [weak self] offers in
+        offerGateway.fetchOffers(shouldSortByName: shouldSortByName) { [weak self] offers in
             self?.currentlyDisplayedOffers = offers
             self?.refreshData()
         }

@@ -4,7 +4,7 @@
 //
 
 protocol OfferGateway {
-    func setup(shouldSortByName: Bool, completion: @escaping ([OfferItem]) -> Void)
+    func fetchOffers(shouldSortByName: Bool, completion: @escaping ([OfferItem]) -> Void)
     func offersSortedByName() -> [OfferItem]
     func offersSortedByCashBack() -> [OfferItem]
 }
