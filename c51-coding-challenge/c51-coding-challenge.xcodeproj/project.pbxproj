@@ -20,6 +20,7 @@
 		104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFB22EE9DAE0028A406 /* NetworkService.swift */; };
 		104FEEFE22EEAB570028A406 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */; };
 		104FEF0022EEAFB40028A406 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFF22EEAFB40028A406 /* CustomError.swift */; };
+		AA3EA49E907E8C7412089B6C /* Pods_c51_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 		104FEEFB22EE9DAE0028A406 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
 		104FEEFF22EEAFB40028A406 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.release.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.release.xcconfig"; sourceTree = "<group>"; };
+		B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c51_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.debug.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3EA49E907E8C7412089B6C /* Pods_c51_coding_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,8 @@
 				104FEECB22EE7F4F0028A406 /* c51-coding-challenge */,
 				104FEEE022EE7F510028A406 /* c51-coding-challengeTests */,
 				104FEECA22EE7F4F0028A406 /* Products */,
+				9C215540CB7ECCC5CC2C5AA8 /* Pods */,
+				E1B87A465ACE769ECE955ECC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +180,24 @@
 			path = Serivces;
 			sourceTree = "<group>";
 		};
+		9C215540CB7ECCC5CC2C5AA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */,
+				88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1B87A465ACE769ECE955ECC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 104FEEE622EE7F510028A406 /* Build configuration list for PBXNativeTarget "c51-coding-challenge" */;
 			buildPhases = (
+				2CE098BC9243A58E24EDE800 /* [CP] Check Pods Manifest.lock */,
 				104FEEC522EE7F4F0028A406 /* Sources */,
 				104FEEC622EE7F4F0028A406 /* Frameworks */,
 				104FEEC722EE7F4F0028A406 /* Resources */,
+				3689C28CDD5B62689F00E5B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +295,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CE098BC9243A58E24EDE800 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-c51-coding-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3689C28CDD5B62689F00E5B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		104FEEC522EE7F4F0028A406 /* Sources */ = {
@@ -442,6 +511,7 @@
 		};
 		104FEEE722EE7F510028A406 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +530,7 @@
 		};
 		104FEEE822EE7F510028A406 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

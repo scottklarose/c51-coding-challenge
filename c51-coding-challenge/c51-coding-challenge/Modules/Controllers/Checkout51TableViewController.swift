@@ -7,9 +7,9 @@ import UIKit
 
 
 class Checkout51TableViewController: UITableViewController {
-    let testItem1 = OfferItem(offerImageUrl: URL(string: "http://www.google.com")!, offerName: "Test 1 Offer", cashBack: "$1.20")
-    let testItem2 = OfferItem(offerImageUrl: URL(string: "http://www.google.com")!, offerName: "Test 2 Offer", cashBack: "$3.20")
-    let testItem3 = OfferItem(offerImageUrl: URL(string: "http://www.google.com")!, offerName: "Test 3 Offer", cashBack: "$0.20")
+    let testItem1 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 1 Offer", cashBack: "$1.20")
+    let testItem2 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 2 Offer", cashBack: "$3.20")
+    let testItem3 = OfferItem(offerImageUrl: URL(string: "https://www.w3schools.com/w3images/avatar2.png")!, offerName: "Test 3 Offer", cashBack: "$0.20")
     
     private var testArray = [OfferItem]()
     
