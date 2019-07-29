@@ -16,6 +16,8 @@
 		104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEEF22EE8B2F0028A406 /* Offer.swift */; };
 		104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF222EE91D40028A406 /* Checkout51TableViewController.swift */; };
 		104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */; };
+		104FEEF922EE96240028A406 /* OfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF822EE96240028A406 /* OfferItem.swift */; };
+		104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFB22EE9DAE0028A406 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		104FEEEF22EE8B2F0028A406 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		104FEEF222EE91D40028A406 /* Checkout51TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout51TableViewController.swift; sourceTree = "<group>"; };
 		104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout51TableViewCell.swift; sourceTree = "<group>"; };
+		104FEEF822EE96240028A406 /* OfferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferItem.swift; sourceTree = "<group>"; };
+		104FEEFB22EE9DAE0028A406 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		104FEEEC22EE7FDE0028A406 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				104FEEFA22EE9D7B0028A406 /* Serivces */,
+				104FEEF722EE95A80028A406 /* Presentable Items */,
 				104FEEF422EE93130028A406 /* Table Cells */,
 				104FEEF122EE91630028A406 /* Controllers */,
 				104FEEEE22EE7FF40028A406 /* Gateways */,
@@ -143,6 +149,22 @@
 				104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */,
 			);
 			path = "Table Cells";
+			sourceTree = "<group>";
+		};
+		104FEEF722EE95A80028A406 /* Presentable Items */ = {
+			isa = PBXGroup;
+			children = (
+				104FEEF822EE96240028A406 /* OfferItem.swift */,
+			);
+			path = "Presentable Items";
+			sourceTree = "<group>";
+		};
+		104FEEFA22EE9D7B0028A406 /* Serivces */ = {
+			isa = PBXGroup;
+			children = (
+				104FEEFB22EE9DAE0028A406 /* NetworkService.swift */,
+			);
+			path = Serivces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +271,10 @@
 				104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */,
 				104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */,
 				104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */,
+				104FEEF922EE96240028A406 /* OfferItem.swift in Sources */,
 				104FEECF22EE7F4F0028A406 /* ViewController.swift in Sources */,
 				104FEECD22EE7F4F0028A406 /* AppDelegate.swift in Sources */,
+				104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
