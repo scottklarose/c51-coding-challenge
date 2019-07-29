@@ -4,3 +4,8 @@
 //
 
 import Foundation
+
+
+protocol NetworkService {
+    func executeRequest(completion: @escaping (Data?, Error?) -> Void)
+}

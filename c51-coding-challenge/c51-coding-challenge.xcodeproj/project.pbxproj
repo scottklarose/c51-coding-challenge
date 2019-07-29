@@ -18,6 +18,8 @@
 		104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */; };
 		104FEEF922EE96240028A406 /* OfferItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEF822EE96240028A406 /* OfferItem.swift */; };
 		104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFB22EE9DAE0028A406 /* NetworkService.swift */; };
+		104FEEFE22EEAB570028A406 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */; };
+		104FEF0022EEAFB40028A406 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFF22EEAFB40028A406 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		104FEEF522EE93A20028A406 /* Checkout51TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout51TableViewCell.swift; sourceTree = "<group>"; };
 		104FEEF822EE96240028A406 /* OfferItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferItem.swift; sourceTree = "<group>"; };
 		104FEEFB22EE9DAE0028A406 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
+		104FEEFF22EEAFB40028A406 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		104FEEED22EE7FEC0028A406 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				104FEEFF22EEAFB40028A406 /* CustomError.swift */,
 				104FEEEF22EE8B2F0028A406 /* Offer.swift */,
 			);
 			path = Models;
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				104FEEFB22EE9DAE0028A406 /* NetworkService.swift */,
+				104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */,
 			);
 			path = Serivces;
 			sourceTree = "<group>";
@@ -268,10 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104FEEFE22EEAB570028A406 /* NetworkServiceImpl.swift in Sources */,
 				104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */,
 				104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */,
 				104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */,
 				104FEEF922EE96240028A406 /* OfferItem.swift in Sources */,
+				104FEF0022EEAFB40028A406 /* CustomError.swift in Sources */,
 				104FEECF22EE7F4F0028A406 /* ViewController.swift in Sources */,
 				104FEECD22EE7F4F0028A406 /* AppDelegate.swift in Sources */,
 				104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */,
