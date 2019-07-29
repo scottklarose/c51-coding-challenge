@@ -2,9 +2,6 @@
 //  c51_coding_challengeTests.swift
 //  c51-coding-challengeTests
 //
-//  Created by Scott Larose on 2019-07-28.
-//  Copyright © 2019 ScottLarose. All rights reserved.
-//
 
 import XCTest
 @testable import c51_coding_challenge

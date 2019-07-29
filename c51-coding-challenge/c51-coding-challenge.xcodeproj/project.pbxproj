@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFB22EE9DAE0028A406 /* NetworkService.swift */; };
 		104FEEFE22EEAB570028A406 /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */; };
 		104FEF0022EEAFB40028A406 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104FEEFF22EEAFB40028A406 /* CustomError.swift */; };
+		1056F4D822EEB8D000F1F574 /* OfferGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4D722EEB8D000F1F574 /* OfferGateway.swift */; };
+		1056F4DA22EEB8F400F1F574 /* OfferGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4D922EEB8F400F1F574 /* OfferGatewayImpl.swift */; };
+		1056F4DE22EEBEA700F1F574 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */; };
 		AA3EA49E907E8C7412089B6C /* Pods_c51_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		104FEEFB22EE9DAE0028A406 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
 		104FEEFF22EEAFB40028A406 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		1056F4D722EEB8D000F1F574 /* OfferGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferGateway.swift; sourceTree = "<group>"; };
+		1056F4D922EEB8F400F1F574 /* OfferGatewayImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferGatewayImpl.swift; sourceTree = "<group>"; };
+		1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.release.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.release.xcconfig"; sourceTree = "<group>"; };
 		B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c51_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.debug.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		104FEEEE22EE7FF40028A406 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				1056F4D722EEB8D000F1F574 /* OfferGateway.swift */,
+				1056F4D922EEB8F400F1F574 /* OfferGatewayImpl.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				104FEEFB22EE9DAE0028A406 /* NetworkService.swift */,
 				104FEEFD22EEAB570028A406 /* NetworkServiceImpl.swift */,
+				1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */,
 			);
 			path = Serivces;
 			sourceTree = "<group>";
@@ -186,7 +195,6 @@
 				EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */,
 				88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -344,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				104FEEFE22EEAB570028A406 /* NetworkServiceImpl.swift in Sources */,
+				1056F4D822EEB8D000F1F574 /* OfferGateway.swift in Sources */,
+				1056F4DA22EEB8F400F1F574 /* OfferGatewayImpl.swift in Sources */,
 				104FEEF022EE8B2F0028A406 /* Offer.swift in Sources */,
 				104FEEF622EE93A20028A406 /* Checkout51TableViewCell.swift in Sources */,
 				104FEEF322EE91D40028A406 /* Checkout51TableViewController.swift in Sources */,
@@ -352,6 +362,7 @@
 				104FEECF22EE7F4F0028A406 /* ViewController.swift in Sources */,
 				104FEECD22EE7F4F0028A406 /* AppDelegate.swift in Sources */,
 				104FEEFC22EE9DAE0028A406 /* NetworkService.swift in Sources */,
+				1056F4DE22EEBEA700F1F574 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

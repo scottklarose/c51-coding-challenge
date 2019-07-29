@@ -11,19 +11,12 @@ class NetworkServiceImpl: NetworkService {
     private let httpPresentableError = "Invalid HTTP status code."
     
     func executeRequest(completion: @escaping (Data?, Error?) -> Void) {
-        guard let endpointURL = URL(string: offersUrlString) else {
+        guard let apiURL = URL(string: offersUrlString) else {
             return
         }
         
-        let request = craftRequestWith(endpointURL: endpointURL)
+        let request = URLRequest(url: apiURL)
         executeSessionTaskWith(request: request, completion: completion)
-    }
-    
-    private func craftRequestWith(endpointURL: URL) -> URLRequest {
-        var request = URLRequest(url: endpointURL)
-        request.httpMethod = "GET"
-        
-        return request
     }
     
     private func executeSessionTaskWith(request: URLRequest, completion: @escaping (Data?, Error?) -> Void) {
