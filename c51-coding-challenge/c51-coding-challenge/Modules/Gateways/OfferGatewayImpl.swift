@@ -31,16 +31,43 @@ class OfferGatewayImpl: OfferGateway {
         do {
             let offersResponse = try JSONDecoder().decode(OffersResponse.self, from: offerData)
             return offersResponse
-        } catch {
+        } catch let error {
+            print("Error parsing offers response: \(error.localizedDescription)")
             return nil
         }
     }
     
     func offersSortedByName() -> [OfferItem] {
-        return [OfferItem]()
+        let sortedByNameOffers = sortOffersByName()
+        return convertOffersToOfferItems(offers: sortedByNameOffers)
+    }
+    
+    private func sortOffersByName() -> [Offer] {
+        return currentOffers.sorted { $0.name < $1.name }
+    }
+    
+    private func convertOffersToOfferItems(offers: [Offer]) -> [OfferItem] {
+        return offers.compactMap {
+            transformOffer(offer: $0)
+        }
+    }
+    
+    private func transformOffer(offer: Offer) -> OfferItem? {
+        guard let offerImageUrl = URL(string: offer.imageUrl) else {
+            return nil
+        }
+        
+        let cashBackTitle = "$\(offer.cashBack)"
+        
+        return OfferItem(offerImageUrl: offerImageUrl, offerName: offer.name, cashBack: cashBackTitle)
     }
     
     func offersSortedByCashBack() -> [OfferItem] {
-        return [OfferItem]()
+        let sortedByCashBackOffers = sortOffersByCashBack()
+        return convertOffersToOfferItems(offers: sortedByCashBackOffers)
+    }
+    
+    private func sortOffersByCashBack() -> [Offer] {
+        return currentOffers.sorted { $0.cashBack < $1.cashBack }
     }
 }

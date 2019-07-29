@@ -23,6 +23,7 @@
 		1056F4D822EEB8D000F1F574 /* OfferGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4D722EEB8D000F1F574 /* OfferGateway.swift */; };
 		1056F4DA22EEB8F400F1F574 /* OfferGatewayImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4D922EEB8F400F1F574 /* OfferGatewayImpl.swift */; };
 		1056F4DE22EEBEA700F1F574 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */; };
+		1056F4E122EEC5E200F1F574 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1056F4E022EEC5E200F1F574 /* MockNetworkService.swift */; };
 		AA3EA49E907E8C7412089B6C /* Pods_c51_coding_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		1056F4D722EEB8D000F1F574 /* OfferGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferGateway.swift; sourceTree = "<group>"; };
 		1056F4D922EEB8F400F1F574 /* OfferGatewayImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferGatewayImpl.swift; sourceTree = "<group>"; };
 		1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		1056F4E022EEC5E200F1F574 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		88B0AD996BD69F7C052CFC7E /* Pods-c51-coding-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.release.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.release.xcconfig"; sourceTree = "<group>"; };
 		B7B9A849CE20E0139E23BA30 /* Pods_c51_coding_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_c51_coding_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAB9CFF62D8626F6F3D6B1F /* Pods-c51-coding-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-c51-coding-challenge.debug.xcconfig"; path = "Target Support Files/Pods-c51-coding-challenge/Pods-c51-coding-challenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		104FEEE022EE7F510028A406 /* c51-coding-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				1056F4DF22EEC41200F1F574 /* Mocks */,
 				104FEEE122EE7F510028A406 /* c51_coding_challengeTests.swift */,
 				104FEEE322EE7F510028A406 /* Info.plist */,
 			);
@@ -187,6 +190,14 @@
 				1056F4DD22EEBEA700F1F574 /* ServiceManager.swift */,
 			);
 			path = Serivces;
+			sourceTree = "<group>";
+		};
+		1056F4DF22EEC41200F1F574 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1056F4E022EEC5E200F1F574 /* MockNetworkService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9C215540CB7ECCC5CC2C5AA8 /* Pods */ = {
@@ -370,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1056F4E122EEC5E200F1F574 /* MockNetworkService.swift in Sources */,
 				104FEEE222EE7F510028A406 /* c51_coding_challengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
